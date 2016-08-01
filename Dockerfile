@@ -1,4 +1,4 @@
-FROM php:7.0.7-apache 
+FROM php:7.0.7-apache
 
 RUN apt-get update && apt-get -y --no-install-recommends install \
     ca-certificates \
@@ -12,5 +12,5 @@ RUN curl -o /usr/local/bin/gosu -SL "https://github.com/tianon/gosu/releases/dow
     && chmod +x /usr/local/bin/gosu
 
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-
+RUN chmod +x /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
