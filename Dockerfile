@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM php:7.0.7-apache 
 
 RUN apt-get update && apt-get -y --no-install-recommends install \
     ca-certificates \
